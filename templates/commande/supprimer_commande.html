@@ -1,0 +1,23 @@
+{% extends 'main.html' %}<!--Liaison avec main-->
+    
+<hr><!-- Pour faire un seaut de ligne -->
+{% block content%}<!--On reecrit ici pour faire un lien avec la page intia;-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+<p> Voulez-vous supprimer cette commande ? </p>
+<form action="{% url 'supprimer_commande'  item.id %}" method="post">
+    {% csrf_token %}
+    <a class = "btn btn-warning" href="{% url 'accueil' %}">Annuler</a>
+    <input class="btn btn-danger" type="submit" name="Confirmer">
+</form>
+
+        </div>
+</div>
+    </div>
+
+{% endblock %}
+<hr>
+
+
+

@@ -1,0 +1,22 @@
+{% extends 'main.html' %}<!--Liaison avec main-->
+    
+<hr><!-- Pour faire un seaut de ligne -->
+{% block content%}<!--On reecrit ici pour faire un lien avec la page intia;-->
+<div class="row">
+<div class="col-md-6">
+    <div class="card card-body">
+<form action="" method="POST">
+   {% csrf_token %}<!-- Dans un formualire en django , il faut toujours mettre ca pour cripter les informations-->
+    {{ form }}<!-- Faire appel au formulaire-->
+    
+        
+    <input type ="submit" name="Envoyer">
+        
+</form>
+
+        </div>
+</div>
+    </div>
+
+{% endblock %}
+<hr>
